@@ -33,3 +33,16 @@ Things you may want to cover:
 ## Association
 - has_many :groups
 - has_many :messages
+
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|string|null: false|
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+## Association
+- belong_to :group
+- belong_to :user
