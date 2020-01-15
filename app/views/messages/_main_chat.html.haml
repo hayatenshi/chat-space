@@ -1,4 +1,16 @@
 .chat-main
   .chat-main__group-info
+    .top-item
+      .top-item__name
+        TECH::EXPERT
+      %ul.top-item__member
+        Member：
+        %li.top-item__member__list
+          baba
+        %li.top-item__member__list
+          sakurai
+    .chat-main__group-info__edit
+      = link_to "#", class: "edit-btn" do
+        Edit
   .chat-main__message-list
   .chat-main__message-form
