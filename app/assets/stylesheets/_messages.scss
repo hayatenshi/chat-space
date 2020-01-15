@@ -95,6 +95,27 @@
   &__message-list {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
+    padding: 35px 40px;
+    .message {
+      padding-bottom: 46px;
+      &__info {
+        display: flex;
+        &__name {
+          font-size: 16px;
+          color: #333;
+          padding-bottom: 12px;
+        }
+        &__day-time {
+          font-size: 12px;
+          color: #999;
+          margin-left: 10px;
+        }
+      }
+      &__text {
+        font-size: 14px;
+        color: #434a54;
+      }
+    }
   }
   &__message-form {
     height: 90px;
