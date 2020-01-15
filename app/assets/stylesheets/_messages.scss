@@ -81,7 +81,7 @@
     &__edit {
       height: 40px;
       width: 72px;
-      border: 1px solid;
+      border: 1px solid #38aef0;
       margin: 28px 40px;
       padding: 0 20px;
       .edit-btn {
@@ -120,5 +120,39 @@
   &__message-form {
     height: 90px;
     background-color: #d2d2d2;
+    padding: 20px 40px;
+    .form {
+      display: flex;
+      .input-box {
+        width: 100%;
+        display: flex;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border-style: none;
+        }
+        &__image {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      .submit-btn {
+        height: 50px;
+        width: 100px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
   }
 }
