@@ -1,0 +1,42 @@
+.side-bar {
+  @include heightWidth(100vh, 300px);
+  color: $sideFontColor;
+  font-weight: bold;
+  &__user-name {
+    @include verticalHorizontal;
+    height: 100px;
+    background-color: $sideTopBgColor;
+    .top-item {
+      @include heightWidth(20px, calc(300px - 20px * 2));
+      @include verticalHorizontal(space-between, normal);
+      line-height: 20px;
+      &__name {
+        font-size: 16px;
+      }
+      &__icon {
+        @include verticalHorizontal(flex-end, normal);
+        width: 60px;
+        .strong {
+          color: $sideIconColor;
+          text-decoration: none;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &__group-list {
+    height: calc(100vh - 100px);
+    background-color: $sideGroupBgColor;
+    padding: 20px;
+    .group {
+      margin-bottom: 40px;
+      &__name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__message {
+        font-size: 11px;
+      }
+    }
+  }
+}

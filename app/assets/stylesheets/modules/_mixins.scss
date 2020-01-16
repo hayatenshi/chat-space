@@ -1,0 +1,11 @@
+@mixin heightWidth($h, $w) {
+  height: $h;
+  width: $w;
+}
+
+@mixin verticalHorizontal($jc:center, $ai:center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
