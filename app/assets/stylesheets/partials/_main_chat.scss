@@ -1,11 +1,9 @@
 .chat-main {
-  height: 100vh;
-  width: calc(100vw - 300px);
+  @include heightWidth(100vh, calc(100vw - 300px));
   &__group-info {
+    @include verticalHorizontal(space-between, normal);
     height: 100px;
     background-color: $chatTopBgColor;
-    display: flex;
-    justify-content: space-between;
     .top-item {
       &__name {
         font-size: 20px;
@@ -24,8 +22,7 @@
       }
     }
     &__edit {
-      height: 40px;
-      width: 72px;
+      @include heightWidth(40px, 72px);
       margin: 28px 40px;
       .edit-btn {
         font-size: 16px;
