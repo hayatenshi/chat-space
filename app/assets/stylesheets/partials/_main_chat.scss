@@ -1,0 +1,104 @@
+.chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  &__group-info {
+    height: 100px;
+    background-color: $chatTopBgColor;
+    display: flex;
+    justify-content: space-between;
+    .top-item {
+      &__name {
+        font-size: 20px;
+        color: $chatTopGroupFontColor;
+        margin: 35px 40px 15px;
+      }
+      &__member {
+        height: 20px;
+        font-size: 12px;
+        color: $chatTopMemberFontColor;
+        margin-left: 40px;
+        display: flex;
+        &__list {
+          margin-right: 5px;
+        }
+      }
+    }
+    &__edit {
+      height: 40px;
+      width: 72px;
+      margin: 28px 40px;
+      .edit-btn {
+        font-size: 16px;
+        color: $chatTopBtnColor;
+        padding: 0 20px;
+        text-decoration: none;
+        line-height: 40px;
+        border: 1px solid $chatTopBtnColor;
+        position:  absolute;
+      }
+    }
+  }
+  &__message-list {
+    height: calc(100vh - 100px - 90px);
+    background-color: $chatMessageBgColor;
+    padding: 35px 40px;
+    .message {
+      padding-bottom: 46px;
+      &__info {
+        display: flex;
+        &__name {
+          font-size: 16px;
+          color: $chatMessageNameFontColor;
+          padding-bottom: 12px;
+        }
+        &__day-time {
+          font-size: 12px;
+          color: $chatMessageDaytimeFontColor;
+          margin-left: 10px;
+        }
+      }
+      &__text {
+        font-size: 14px;
+        color: $chatMessageTextFontColor;
+      }
+    }
+  }
+  &__message-form {
+    height: 90px;
+    background-color: $chatFormBgColor;
+    padding: 20px 40px;
+    .form {
+      display: flex;
+      .input-box {
+        width: 100%;
+        display: flex;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border-style: none;
+        }
+        &__image {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      .submit-btn {
+        height: 50px;
+        width: 100px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $formBtnColor;
+        color: $formBtnFontColor;
+        cursor: pointer;
+      }
+    }
+  }
+}
