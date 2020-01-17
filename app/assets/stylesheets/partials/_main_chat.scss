@@ -25,10 +25,9 @@
       @include heightWidth(40px, 72px);
       margin: 28px 40px;
       .edit-btn {
+        @include linkStyle($chatTopBtnColor);
         font-size: 16px;
-        color: $chatTopBtnColor;
         padding: 0 20px;
-        text-decoration: none;
         line-height: 40px;
         border: 1px solid $chatTopBtnColor;
         position:  absolute;

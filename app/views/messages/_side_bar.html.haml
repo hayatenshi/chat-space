@@ -4,18 +4,15 @@
       .top-item__name
         = current_user.name
       .top-item__icon
-        = link_to "#", class:"strong" do
+        = link_to new_group_path, class:"strong" do
           = icon("fa", "edit")
         = link_to edit_user_path(current_user), class:"strong" do
           = icon("fa", "cog")
-  .side-bar__group-list
-    .group
-      .group__name
-        TECH::EXPERT
-      .group__message
-        まだメッセージがありません
-    .group
-      .group__name
-        TECH::CAMP
-      .group__message
-        まだメッセージがありません
+  .side-bar__groups-list
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class:"group__style" do
+          .group__name
+            = group.name
+          .group__message
+            まだメッセージがありません

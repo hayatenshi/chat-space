@@ -17,19 +17,21 @@
         @include verticalHorizontal(flex-end, normal);
         width: 60px;
         .strong {
-          color: $sideIconColor;
-          text-decoration: none;
+          @include linkStyle($sideIconColor);
           margin-left: 5px;
         }
       }
     }
   }
-  &__group-list {
+  &__groups-list {
     height: calc(100vh - 100px);
     background-color: $sideGroupBgColor;
     padding: 20px;
     .group {
       margin-bottom: 40px;
+      &__style {
+        @include linkStyle($sideFontColor);
+      }
       &__name {
         font-size: 15px;
         margin-bottom: 5px;

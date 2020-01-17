@@ -9,3 +9,7 @@
   align-items: $ai;
 }
 
+@mixin linkStyle($color) {
+  color: $color;
+  text-decoration: none;
+}
