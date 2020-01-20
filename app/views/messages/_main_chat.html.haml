@@ -2,15 +2,14 @@
   .chat-main__group-info
     .top-item
       .top-item__name
-        TECH::EXPERT
+        = @group.name
       %ul.top-item__member
         Member：
-        %li.top-item__member__list
-          baba
-        %li.top-item__member__list
-          sakurai
+        - @group.users.each do |user|
+          %li.top-item__member__list
+            = user.name
     .chat-main__group-info__edit
-      = link_to "#", class: "edit-btn" do
+      = link_to edit_group_path(@group), class: "edit-btn" do
         Edit
   .chat-main__message-list
     = render @messages
