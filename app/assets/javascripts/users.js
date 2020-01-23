@@ -39,7 +39,7 @@ $(function(){
       }
     })
     .fail(function(){
-      console.log("fail");
+      alert("通信エラー。ユーザー名を表示できません。");
     })
   });
 });
